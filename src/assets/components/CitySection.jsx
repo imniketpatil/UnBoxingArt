@@ -30,7 +30,7 @@ const City = styled.div`
   font-weight: 600;
   h2 {
     color: #333;
-    margin-top: 20px;
+    margin: 3rem 0 3rem 0;
     font-size: 32px;
     line-height: 36px;
     font-weight: 500;
