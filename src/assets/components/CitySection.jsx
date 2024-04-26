@@ -10,7 +10,7 @@ const CitySection = () => {
   };
 
   return (
-    <City>
+    <City className="cities">
       <h2>Choose Your City</h2>
       <div className="city-btns">
         {Object.entries(cities).map(([city, date]) => (
@@ -25,7 +25,7 @@ const CitySection = () => {
 
 const City = styled.div`
   text-align: center;
-  margin: 80px 0px 80px 0px;
+  margin: 80px 0px 40px 0px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   h2 {

@@ -7,8 +7,6 @@ const HeroSection = () => {
       <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div className="iframebg col-10 col-sm-8 col-lg-6">
           <iframe
-            width="460"
-            height="245"
             src="https://www.youtube.com/embed/9pFk0pOPSdA?si=WAg7CAAtbyxwoEGz&autoplay=1&mute=1"
             title="YouTube video player"
             frameBorder="0"
@@ -39,6 +37,7 @@ const HeroSection = () => {
     </Hero>
   );
 };
+
 const Hero = styled.div`
   background-image: url("./images/heroSection-bg.png");
   background-repeat: no-repeat;
@@ -47,6 +46,13 @@ const Hero = styled.div`
     background-image: url("./images/iframe-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    iframe {
+      width: 410px;
+      height: 220px;
+    }
   }
   h1 {
     color: #333;
@@ -59,12 +65,27 @@ const Hero = styled.div`
       font-family: "Poppins", sans-serif;
       font-weight: 400;
     }
-    @media screen and (min-width: 490px) {
-      iframe {
-        width: 410px; /* Adjusted width for screen width >= 490px */
-        height: 220px; /* Adjusted height for screen width >= 490px */
-      }
+  }
+
+  @media screen and (max-width: 440px) {
+    .iframebg iframe {
+      width: 390px;
+      height: 210px;
+    }
+  }
+
+  @media screen and (max-width: 415px) {
+    .iframebg {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 990px) and (min-width: 460px) {
+    .iframebg {
+      width: 615px;
+      height: 330px;
     }
   }
 `;
+
 export default HeroSection;
