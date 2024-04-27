@@ -6,6 +6,7 @@ import HeroSection from "./assets/components/HeroSection";
 import AboutSection from "./assets/components/AboutSection";
 import styled from "styled-components";
 import PastSection from "./assets/components/PastSection";
+import CommunitySection from "./assets/components/CommunitySection";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -16,6 +17,7 @@ function App() {
       <HeroSection />
       <AboutSection />
       <PastSection />
+      <CommunitySection />
     </AppComp>
   );
 }
