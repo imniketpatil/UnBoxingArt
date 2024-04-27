@@ -7,6 +7,9 @@ import AboutSection from "./assets/components/AboutSection";
 import styled from "styled-components";
 import PastSection from "./assets/components/PastSection";
 import CommunitySection from "./assets/components/CommunitySection";
+import GetInTouch from "./assets/components/GetInTouch";
+import FAQSection from "./assets/components/FAQSection";
+import FooterSection from "./assets/components/FooterSection";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -18,6 +21,9 @@ function App() {
       <AboutSection />
       <PastSection />
       <CommunitySection />
+      <GetInTouch />
+      <FAQSection />
+      <FooterSection />
     </AppComp>
   );
 }

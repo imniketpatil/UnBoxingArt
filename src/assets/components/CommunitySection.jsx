@@ -33,6 +33,9 @@ const CommunitySection = () => {
   );
 };
 const Community = styled.div`
+  background-image: url("./images/heroSection-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 50px 0px 50px 0px;
 
   display: flex;
