@@ -18,6 +18,9 @@ const Button = styled.button`
   font-weight: 500;
   margin: 0 0.2rem 0 0.2rem;
   /* margin-left: ${(props) => (props.variant === "contact" ? "24px" : "0")}; */
+  @media screen and (max-width: 535px) {
+    padding: 8px 40px 12px;
+  }
 `;
 
 export default NavBtn;

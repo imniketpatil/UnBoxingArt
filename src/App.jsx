@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./assets/components/NavBar";
 import CitySection from "./assets/components/CitySection";
 import HeroSection from "./assets/components/HeroSection";
+import AboutSection from "./assets/components/AboutSection";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,6 +13,7 @@ function App() {
       <NavBar />
       <CitySection />
       <HeroSection />
+      <AboutSection />
     </>
   );
 }

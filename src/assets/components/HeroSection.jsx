@@ -4,7 +4,7 @@ import styled from "styled-components";
 const HeroSection = () => {
   return (
     <Hero className="container col-xxl-8 px-4 py-5">
-      <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div className="video-div row flex-lg-row-reverse align-items-center g-5 py-5">
         <div className="iframebg col-10 col-sm-8 col-lg-6">
           <iframe
             src="https://www.youtube.com/embed/9pFk0pOPSdA?si=WAg7CAAtbyxwoEGz&autoplay=1&mute=1"
@@ -27,10 +27,19 @@ const HeroSection = () => {
             people, share your views, listen to beautiful artists, and become a
             part of our community.
           </p>
-          <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-            <h5>250+ Events Completed</h5>
-            <h5>15+ Cities</h5>
-            <h5>6000+ Attendees</h5>
+          <div className="events d-grid gap-2 d-md-flex justify-content-md-start">
+            <h5>
+              250+ <br />
+              Events Completed
+            </h5>
+            <h5>
+              15+ <br />
+              Cities
+            </h5>
+            <h5>
+              6000+ <br />
+              Attendees
+            </h5>
           </div>
         </div>
       </div>
@@ -39,6 +48,10 @@ const HeroSection = () => {
 };
 
 const Hero = styled.div`
+  .video-div {
+    display: flex;
+    justify-content: center;
+  }
   background-image: url("./images/heroSection-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,6 +62,7 @@ const Hero = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 0px 20px 0px;
     iframe {
       width: 410px;
       height: 220px;
@@ -67,7 +81,7 @@ const Hero = styled.div`
     }
   }
 
-  @media screen and (max-width: 440px) {
+  /* @media screen and (max-width: 440px) {
     .iframebg iframe {
       width: 390px;
       height: 210px;
@@ -84,6 +98,11 @@ const Hero = styled.div`
     .iframebg {
       width: 615px;
       height: 330px;
+    }
+  } */
+  .events {
+    h5 {
+      padding: 0px 15px 0px 15px;
     }
   }
 `;

@@ -1,28 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import NavBtn from "./NavBtn";
 
 const NavBar = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <Nav className="navbar navbar-expand-lg navbar-light bg-light">
       <img src="./images/Logo.png" className="navbar-brand" href="#" />
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+        onClick={toggleNav}
+        aria-expanded={isNavOpen ? "true" : "false"}
       >
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <div className="ms-auto">
+      <div
+        className={`burger-btns collapse navbar-collapse ${
+          isNavOpen ? "show" : ""
+        }`}
+      >
+        <NavBtnWrapper className="ms-auto">
           <NavBtn text="Book Now" variant="book" />
           <NavBtn text="Contact Us" variant="contact" />
-        </div>
+        </NavBtnWrapper>
       </div>
     </Nav>
   );
@@ -45,9 +52,25 @@ const Nav = styled.div`
   @media screen and (max-width: 390px) {
     padding: 20px 10px;
   }
-  Button:hover {
+  button {
+    transition: transform 0.1s;
+  }
+  button:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+  img:hover {
     cursor: pointer;
   }
+`;
+
+const NavBtnWrapper = styled.div`
+  /* @media screen and (max-width: 991px) {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } */
 `;
 
 export default NavBar;

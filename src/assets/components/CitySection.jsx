@@ -25,7 +25,7 @@ const CitySection = () => {
 
 const City = styled.div`
   text-align: center;
-  margin: 80px 0px 40px 0px;
+  margin: 80px 0px 0px 0px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   h2 {
@@ -35,8 +35,13 @@ const City = styled.div`
     line-height: 36px;
     font-weight: 500;
   }
+  Button {
+    transition: transform 0.1s;
+  }
+
   Button:hover {
     cursor: pointer;
+    transform: scale(1.1);
   }
 `;
 
